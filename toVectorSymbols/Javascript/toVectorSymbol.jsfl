@@ -4,9 +4,8 @@
  * when I need to mass convert the individual image files to vectors.
 **/
 
-
-// Get the Selected Items
-var selectedItems = fl.getDocumentDOM().library.getSelectedItems();
+var doc = fl.getDocumentDOM();
+var selectedItems = doc.library.getSelectedItems();
 
 function toVectorSymbol()
 {
@@ -18,7 +17,7 @@ function toVectorSymbol()
   } else if (selectedItems.length >= 1)
   {
     convertItems();		// Converts bitmaps to vectors, then stores them in a movie clip.
-		removeBitmaps();	// Deletes the source bitmaps. You can remove this if you want to keep the original bitmaps.
+    removeBitmaps();	// Deletes the source bitmaps. You can remove this if you want to keep the original bitmaps.
   }
 }
 
@@ -32,26 +31,26 @@ function convertItems()
 		if (selectedItems[i] instanceof BitmapItem)
 		{
 			itemName = selectedItems[i].name;
-			fl.getDocumentDOM().library.addItemToDocument({x:0, y:0}, itemName);
-			fl.getDocumentDOM().selectAll();
-			fl.getDocumentDOM().traceBitmap(0, 1, 'pixels', 'few corners');
-			fl.getDocumentDOM().convertToSymbol("movie clip", itemName.replace(/\.[^/.]+$/, ""), "bottom center");
-			fl.getDocumentDOM().selectAll();
-			fl.getDocumentDOM().deleteSelection();
+			doc.library.addItemToDocument({x:0, y:0}, itemName);
+			doc.selectAll();
+			doc.traceBitmap(0, 1, 'pixels', 'few corners');
+			doc.convertToSymbol("movie clip", itemName.replace(/\.[^/.]+$/, ""), "bottom center");
+			doc.selectAll();
+			doc.deleteSelection();
 		}
   }
 }
 
 function removeBitmaps()
 {
-	var itemArray = fl.getDocumentDOM().library.items;
+	var itemArray = doc.library.items;
 	var i;
 	for(i = 0; i < itemArray.length; i++)
 	{
 		if (itemArray[i] instanceof BitmapItem)
 		{
 			var itemName = itemArray[i].name;
-			fl.getDocumentDOM().library.deleteItem(itemName);
+			doc.library.deleteItem(itemName);
 		}
 	}
 }
