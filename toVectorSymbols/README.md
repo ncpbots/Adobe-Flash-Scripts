@@ -14,6 +14,7 @@
 1. Select bitmaps in the Flash library, then click Commands > Convert to Vector Symbols.
 2. The script will try to store the new symbols in a folder. Specify the path for the an existing folder or a new folder.
 3. Leave the field blank if you want the script to leave the new symbols in the Library root.
+
 -  Ex. "NewFolder" will store them in an existing folder called "NewFolder" or create a new folder with that name to store them in.
 -  You can also specify paths for subfolders, i.e. "NewFolder/subfolder0".
 
