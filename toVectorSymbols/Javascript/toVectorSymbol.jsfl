@@ -20,7 +20,7 @@ function toVectorSymbol()
 		folderpath = prompt("Please provide folder path to store symbols.");
 		if (!(folderpath == null))
 		{
-    	convertItems();		// Converts bitmaps to vectors, then stores them in a movie clip.
+         convertItems();		// Converts bitmaps to vectors, then stores them in a movie clip.
 			removeBitmaps();	// Deletes the source bitmaps. You can remove this if you want to keep the original bitmaps.
 		}
   }
