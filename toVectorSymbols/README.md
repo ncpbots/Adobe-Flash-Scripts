@@ -9,10 +9,14 @@
 -  Explicitly, "AppendLibraryNames.jsfl" should go in [USER]\AppData\Local\Adobe\[Flash]\en_US\Configuration\Javascript and "Append Library Names.jsfl" should go in [USER]\AppData\Local\Adobe\[Flash]\en_US\Configuration\Commands
 
 ###Usage
->Select bitmaps in the Flash library, then click Commands > Convert to Vector Symbols
+>Select bitmaps in the Flash library, then click Commands > Convert to Vector Symbols.
+>The script will try to store the new symbols in a folder. Specify the path for the an existing folder or a new folder.
+-  Ex. "NewFolder" will store them in an existing folder called "NewFolder" or create a new folder with that name to store them in.
+-  You can also specify paths for subfolders, i.e. "NewFolder/subfolder0".
+>Leave the field blank if you want the script to leave the new symbols in the Library root.
 
 ###Notes
 -  This script will also remove the source bitmaps from the library.
 -  If you want to keep the original bitmaps, edit the "AppendLibraryNames.jsfl" file.
 -  I've commented which line to remove if you want to keep your bitmaps.
--  It should be Line 20: removeBitmaps();
+-  It should be Line 24: removeBitmaps();
