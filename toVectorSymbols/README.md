@@ -15,4 +15,4 @@
 -  This script will also remove the source bitmaps from the library.
 -  If you want to keep the original bitmaps, edit the "AppendLibraryNames.jsfl" file.
 -  I've commented which line to remove if you want to keep your bitmaps.
--  It should be Line 21: removeBitmaps();
+-  It should be Line 20: removeBitmaps();
