@@ -1,0 +1,1 @@
+﻿fl.runScript(fl.configURI + 'Javascript/toVectorSymbol.jsfl', 'toVectorSymbol');
